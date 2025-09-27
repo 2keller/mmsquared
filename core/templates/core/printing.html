@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}3D Printing | MmSquared{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 text-gray-900 py-24 px-6 text-center">
+  <h1 class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">
+    From Pixels to Reality <span class="text-white">in Days</span>
+  </h1>
+  <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+    MmSquared transforms your <strong>CAD files</strong> into tangible prototypes and products. 
+    Whether you’re an inventor, architect, or designer — we bring your ideas to life.
+  </p>
+  <a href="/contact/" class="bg-white text-yellow-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-100 transition">
+    ⚡ Start a Print Job
+  </a>
+</section>
+
+<!-- Capabilities Section -->
+<section class="py-16 px-6 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold text-center text-yellow-700 mb-10">Why Print with MmSquared?</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500">
+      <h3 class="text-xl font-bold text-yellow-700 mb-2">Rapid Prototyping</h3>
+      <p>Get your designs in hand quickly. Perfect for testing, pitching, and iterating.</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-600">
+      <h3 class="text-xl font-bold text-yellow-800 mb-2">Material Variety</h3>
+      <p>Choose from plastics, resins, and specialty filaments to match your project’s needs.</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-700">
+      <h3 class="text-xl font-bold text-yellow-900 mb-2">Precision & Quality</h3>
+      <p>High‑resolution prints with smooth finishes and durable strength.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Showcase Section -->
+<section class="bg-gray-50 py-16 px-6">
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Recent Prints</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <img src="{% static 'core/images/print1.jpg' %}" alt="Prototype sample" class="rounded-xl shadow-lg hover:scale-105 transition">
+    <img src="{% static 'core/images/print2.jpg' %}" alt="Architectural model" class="rounded-xl shadow-lg hover:scale-105 transition">
+    <img src="{% static 'core/images/print3.jpg' %}" alt="Custom product" class="rounded-xl shadow-lg hover:scale-105 transition">
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-gradient-to-r from-yellow-600 to-yellow-800 text-white py-20 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-6">Your Design, Our Machines</h2>
+  <p class="max-w-2xl mx-auto mb-8 text-lg">
+    Don’t just imagine your product — hold it. Upload your design and let’s make it real.
+  </p>
+  <a href="/contact/" class="bg-white text-yellow-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-100 transition">
+    🚀 Get a Quote Today
+  </a>
+</section>
+{% endblock %}

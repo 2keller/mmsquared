@@ -4,81 +4,104 @@
 {% block title %}Home | MmSquared{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-center py-16 px-4">
-  <h1 class="text-4xl font-bold mb-4">Welcome to MmSquared</h1>
-  <p class="text-lg mb-6">Capture. Create. Educate. Your creative journey starts here.</p>
-  <div class="space-x-4">
-    <a href="#services" class="bg-white text-purple-700 font-semibold py-2 px-4 rounded shadow">Explore Services</a>
-    <a href="/contact/" class="bg-white text-pink-700 font-semibold py-2 px-4 rounded shadow">Contact Us</a>
-  </div>
-</section>
+<div class="relative min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-green-800 overflow-x-hidden text-white">
 
-<!-- Services Section -->
-<section id="services" class="py-12 px-4 space-y-12">
+  <!-- Animated Background -->
+  <div class="absolute inset-0 animate-gradient bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-700/30 via-transparent to-green-700/30 -z-10"></div>
+  <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 -z-10"></div>
 
-  <!-- Photography -->
-  <div class="bg-blue-100 rounded-lg p-6 shadow-md">
-    <h2 class="text-2xl font-bold text-blue-800 mb-2">📸 Photography</h2>
-    <p class="text-gray-700 mb-4">Professional shoots, editing, and portfolio display to capture your best moments.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-      <img src="{% static 'core/images/photo1.jpg' %}" alt="Sample Photo" class="rounded shadow">
-      <img src="{% static 'core/images/photo2.jpg' %}" alt="Sample Photo" class="rounded shadow">
-      <img src="{% static 'core/images/photo3.jpg' %}" alt="Sample Photo" class="rounded shadow">
+  <!-- Hero Section -->
+  <section class="relative text-center py-28 px-6">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg">
+      <span class="block text-white">Your <strong>Vision</strong> Transformed.</span>
+      <span class="block text-yellow-400">MmSquared: Where <strong>Creativity Meets Reality</strong>.</span>
+    </h1>
+    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200">
+      <strong>Capture</strong> your memories, <strong>Print</strong> your ideas, and <strong>Master</strong> your future with our focused expertise.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#services" class="bg-white text-purple-700 font-extrabold py-3 px-6 rounded-lg shadow-2xl hover:shadow-purple-400/50 hover:bg-purple-100 transition duration-300">🚀 Explore Our Powerhouse Services</a>
+      <a href="/contact/" class="bg-yellow-400 text-gray-900 font-extrabold py-3 px-6 rounded-lg shadow-2xl hover:shadow-yellow-400/50 hover:bg-yellow-300 transition duration-300">📬 Get a Free Consultation</a>
     </div>
-    <div class="text-center">
-      <a href="/photography/" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow">Explore Photography</a>
-    </div>
-  </div>
+  </section>
 
-  <!-- 3D Printing -->
-  <div class="bg-yellow-100 rounded-lg p-6 shadow-md">
-    <h2 class="text-2xl font-bold text-yellow-800 mb-2">🖨️ 3D Printing</h2>
-    <p class="text-gray-700 mb-4">Upload your models and get them printed with precision and care.</p>
-    <div class="flex flex-col sm:flex-row gap-4 mb-4">
-      <img src="{% static 'core/images/print1.jpg' %}" alt="3D Print" class="rounded shadow w-full sm:w-1/2">
-      <div class="flex items-center justify-center w-full sm:w-1/2">
-        <a href="/printing/" class="bg-yellow-500 text-white font-semibold py-2 px-4 rounded shadow">Start a Print Job</a>
+  <!-- Services Section -->
+  <section id="services" class="py-20 px-6 space-y-16 max-w-6xl mx-auto">
+
+    <!-- Photography -->
+    <div class="bg-white rounded-3xl p-8 shadow-2xl shadow-blue-500/30 transform hover:scale-[1.02] transition duration-300 text-gray-900 border-4 border-blue-500">
+      <h2 class="text-4xl font-black text-blue-700 mb-4 flex items-center">
+        <span class="mr-3">📸</span> Photography: Freeze The Moment
+      </h2>
+      <p class="text-xl text-gray-700 mb-6 font-medium italic border-l-4 border-blue-400 pl-3">
+        Don't just take pictures—tell a story! We specialize in high-impact, professional shoots and expert editing to give your moments a polished, cinematic look.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+        <img src="{% static 'core/images/photo1.jpg' %}" alt="Sample Photo 1" class="rounded-xl shadow-xl w-full hover:shadow-blue-300/50 transition">
+        <img src="{% static 'core/images/photo2.jpg' %}" alt="Sample Photo 2" class="rounded-xl shadow-xl w-full hover:shadow-blue-300/50 transition">
+        <img src="{% static 'core/images/photo3.jpg' %}" alt="Sample Photo 3" class="rounded-xl shadow-xl w-full hover:shadow-blue-300/50 transition">
+      </div>
+      <div class="text-center mt-6">
+        <a href="/photography/" class="bg-blue-600 text-white font-extrabold text-lg py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">SEE OUR PORTFOLIO ➡️</a>
       </div>
     </div>
-  </div>
 
-  <!-- Tutoring -->
-  <div class="bg-green-100 rounded-lg p-6 shadow-md">
-    <h2 class="text-2xl font-bold text-green-800 mb-2">🎓 Tutoring</h2>
-    <p class="text-gray-700 mb-4">Learn new skills with expert guidance and flexible courses tailored to your goals.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="font-semibold text-green-700">Python Basics</h3>
-        <p class="text-sm text-gray-600">Perfect for beginners looking to start coding.</p>
-      </div>
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="font-semibold text-green-700">3D Design Fundamentals</h3>
-        <p class="text-sm text-gray-600">Learn to create printable models with ease.</p>
-      </div>
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="font-semibold text-green-700">Photography Masterclass</h3>
-        <p class="text-sm text-gray-600">From camera basics to editing techniques.</p>
+    <!-- 3D Printing -->
+    <div class="bg-white rounded-3xl p-8 shadow-2xl shadow-yellow-500/30 transform hover:scale-[1.02] transition duration-300 text-gray-900 border-4 border-yellow-500">
+      <h2 class="text-4xl font-black text-yellow-800 mb-4 flex items-center">
+        <span class="mr-3">🖨️</span> 3D Printing: Prototypes to Products
+      </h2>
+      <p class="text-xl text-gray-700 mb-6 font-medium italic border-l-4 border-yellow-400 pl-3">
+        Stop imagining. Start holding! We turn your CAD files into physical reality with incredible speed and material variety. Perfect for inventors, architects, and designers.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 mb-6">
+        <img src="{% static 'core/images/print1.jpg' %}" alt="3D printed prototype" class="rounded-xl shadow-xl w-full sm:w-1/2 hover:shadow-yellow-300/50 transition">
+        <div class="flex items-center justify-center w-full sm:w-1/2">
+          <a href="/printing/" class="bg-yellow-500 text-gray-900 font-extrabold text-lg py-3 px-8 rounded-full shadow-lg hover:bg-yellow-400 transition duration-300">⚡ GET AN INSTANT QUOTE</a>
+        </div>
       </div>
     </div>
-    <div class="text-center">
-      <a href="/tutoring/" class="bg-green-600 text-white font-semibold py-2 px-4 rounded shadow">View Tutoring Courses</a>
+
+    <!-- Tutoring -->
+    <div class="bg-white rounded-3xl p-8 shadow-2xl shadow-green-500/30 transform hover:scale-[1.02] transition duration-300 text-gray-900 border-4 border-green-500">
+      <h2 class="text-4xl font-black text-green-700 mb-4 flex items-center">
+        <span class="mr-3">🧠</span> Tutoring: Conquer High School Maths
+      </h2>
+      <p class="text-xl text-gray-700 mb-6 font-medium italic border-l-4 border-green-400 pl-3">
+        Maths mastery is all we do! We provide targeted, specialized tutoring exclusively for Grade 8 to Grade 12. Watch your confidence and your marks soar.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-green-100 p-6 rounded-xl shadow-md border border-green-300 transform hover:scale-[1.05] transition">
+          <h3 class="font-bold text-2xl text-green-800 mb-1">Grade 8–10: Solid Foundations</h3>
+          <p class="text-base text-gray-700">Unlock algebra, geometry, and key concepts. Turn confusion into clarity.</p>
+        </div>
+        <div class="bg-green-100 p-6 rounded-xl shadow-md border border-green-300 transform hover:scale-[1.05] transition">
+          <h3 class="font-bold text-2xl text-green-800 mb-1">Grade 11–12: Exam Dominance</h3>
+          <p class="text-base text-gray-700">Master calculus, trig, and statistics. Guaranteed confidence for finals and university entry.</p>
+        </div>
+      </div>
+      <div class="text-center mt-6">
+        <a href="/tutoring/" class="bg-green-600 text-white font-extrabold text-lg py-3 px-8 rounded-full shadow-lg hover:bg-green-700 transition duration-300">SCHEDULE YOUR FIRST LESSON 📚</a>
+      </div>
     </div>
-  </div>
 
-</section>
+  </section>
 
-<!-- About Section -->
-<section class="bg-white py-12 px-4 text-center">
-  <h2 class="text-2xl font-bold mb-4">About MmSquared</h2>
-  <p class="text-gray-700 max-w-2xl mx-auto">We’re a passionate team blending creativity and technology to help you express, build, and grow. Whether you're capturing memories, prototyping ideas, or learning new skills — we’re here to support your journey.</p>
-</section>
+  <!-- About Section -->
+  <section id="about" class="bg-white/95 py-20 px-6 text-center rounded-2xl max-w-5xl mx-auto mt-10 text-gray-900 shadow-2xl shadow-purple-500/20">
+    <h2 class="text-4xl font-black mb-6 text-purple-700">💡 Our Mission at MmSquared</h2>
+    <p class="text-gray-800 max-w-3xl mx-auto text-xl leading-relaxed">
+      We are passionate makers and educators — dedicated to making complex processes accessible. We blend cutting-edge technology with focused expertise to ensure your success in both creative projects and academic excellence.
+    </p>
+  </section>
 
-<!-- Contact Section -->
-<section class="bg-gray-800 text-white py-12 px-4 text-center">
-  <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
-  <p class="mb-2">📧 Email: info@mmsquared.co.za</p>
-  <p class="mb-2">📞 Phone: +27 123 456 7890</p>
-  <p>📍 Location: Johannesburg, South Africa</p>
-</section>
-{% endblock %}
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-900 text-white py-20 px-6 text-center mt-10">
+    <h2 class="text-3xl font-bold mb-6 text-yellow-400">🤝 Ready to Transform Your Ideas?</h2>
+    <p class="text-lg mb-3">📧 <a href="mailto:info@mmsquared.co.za" class="underline hover:text-yellow-300 font-semibold">info@mmsquared.co.za</a></p>
+    <p class="text-lg mb-3">📞 <a href="tel:+271234567890" class="underline
+
+</div> <!-- closes the main wrapper -->
+{% endblock %} hover:text-yellow-300 font-semibold">+27 12 345 6789</a></p>
+    <p class="text-lg">📍 123 Creative St, Innovation City, Country</p>
+  </section>

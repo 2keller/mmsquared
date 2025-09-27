@@ -1,0 +1,61 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Tutoring | MmSquared{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-green-600 via-green-700 to-green-800 text-white py-24 px-6 text-center">
+  <h1 class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">
+    Conquer Maths. <span class="text-yellow-300">Unlock Your Future.</span>
+  </h1>
+  <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+    At MmSquared, we specialise in <strong>Grade 8–12 Maths tutoring</strong>. 
+    Our mission: turn confusion into clarity, and exams into opportunities.
+  </p>
+  <a href="/contact/" class="bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-300 transition">
+    📚 Schedule Your First Lesson
+  </a>
+</section>
+
+<!-- Grade Levels -->
+<section class="py-16 px-6 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Tailored Learning for Every Stage</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-green-500">
+      <h3 class="text-2xl font-bold text-green-700 mb-2">Grade 8–10: Solid Foundations</h3>
+      <p class="text-gray-700">We cover algebra, geometry, and problem‑solving skills to build a rock‑solid base for senior years.</p>
+    </div>
+    <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-green-600">
+      <h3 class="text-2xl font-bold text-green-800 mb-2">Grade 11–12: Exam Dominance</h3>
+      <p class="text-gray-700">Master calculus, trigonometry, and statistics. Gain the confidence to excel in finals and university entry exams.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="bg-gray-50 py-16 px-6">
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">What Our Students Say</h2>
+  <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <p class="italic text-gray-700">“Before MmSquared, I was failing Maths. Now I’m scoring distinctions. The lessons are clear and motivating.”</p>
+      <p class="mt-4 font-bold text-green-700">— Grade 12 Student</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <p class="italic text-gray-700">“The tutors made algebra finally click for me. I feel ready for exams and even enjoy Maths now.”</p>
+      <p class="mt-4 font-bold text-green-700">— Grade 9 Student</p>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-gradient-to-r from-green-700 to-green-900 text-white py-20 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-6">Ready to Master Maths?</h2>
+  <p class="max-w-2xl mx-auto mb-8 text-lg">
+    Join hundreds of students who’ve boosted their marks and confidence with MmSquared tutoring.
+  </p>
+  <a href="/contact/" class="bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-300 transition">
+    🎓 Book Your Lesson Today
+  </a>
+</section>
+{% endblock %}
