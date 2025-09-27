@@ -1,26 +1,84 @@
-<!-- core/templates/core/home.html -->
 {% extends 'core/base.html' %}
+{% load static %}
 
-{% block title %}Home | Mm-squared{% endblock %}
+{% block title %}Home | MmSquared{% endblock %}
 
 {% block content %}
-  <section class="text-center">
-    <h2 class="text-3xl font-bold mb-4">Capture. Create. Educate.</h2>
-    <p class="mb-6">We offer photography, 3D printing, and tutoring services to bring your ideas to life.</p>
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-center py-16 px-4">
+  <h1 class="text-4xl font-bold mb-4">Welcome to MmSquared</h1>
+  <p class="text-lg mb-6">Capture. Create. Educate. Your creative journey starts here.</p>
+  <div class="space-x-4">
+    <a href="#services" class="bg-white text-purple-700 font-semibold py-2 px-4 rounded shadow">Explore Services</a>
+    <a href="/contact/" class="bg-white text-pink-700 font-semibold py-2 px-4 rounded shadow">Contact Us</a>
+  </div>
+</section>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white p-4 shadow rounded">
-        <h3 class="text-xl font-semibold">📸 Photography</h3>
-        <p>Professional shoots, editing, and portfolio display.</p>
-      </div>
-      <div class="bg-white p-4 shadow rounded">
-        <h3 class="text-xl font-semibold">🖨️ 3D Printing</h3>
-        <p>YOU DREAM IT. WE PRINT IT.</p>
-      </div>
-      <div class="bg-white p-4 shadow rounded">
-        <h3 class="text-xl font-semibold">🎓 Tutoring</h3>
-        <p>WE OFFER MATHEMATICS Tutoring FOR GRADE 8 TO 12.</p>
+<!-- Services Section -->
+<section id="services" class="py-12 px-4 space-y-12">
+
+  <!-- Photography -->
+  <div class="bg-blue-100 rounded-lg p-6 shadow-md">
+    <h2 class="text-2xl font-bold text-blue-800 mb-2">📸 Photography</h2>
+    <p class="text-gray-700 mb-4">Professional shoots, editing, and portfolio display to capture your best moments.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+      <img src="{% static 'core/images/photo1.jpg' %}" alt="Sample Photo" class="rounded shadow">
+      <img src="{% static 'core/images/photo2.jpg' %}" alt="Sample Photo" class="rounded shadow">
+      <img src="{% static 'core/images/photo3.jpg' %}" alt="Sample Photo" class="rounded shadow">
+    </div>
+    <div class="text-center">
+      <a href="/photography/" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow">Explore Photography</a>
+    </div>
+  </div>
+
+  <!-- 3D Printing -->
+  <div class="bg-yellow-100 rounded-lg p-6 shadow-md">
+    <h2 class="text-2xl font-bold text-yellow-800 mb-2">🖨️ 3D Printing</h2>
+    <p class="text-gray-700 mb-4">Upload your models and get them printed with precision and care.</p>
+    <div class="flex flex-col sm:flex-row gap-4 mb-4">
+      <img src="{% static 'core/images/print1.jpg' %}" alt="3D Print" class="rounded shadow w-full sm:w-1/2">
+      <div class="flex items-center justify-center w-full sm:w-1/2">
+        <a href="/printing/" class="bg-yellow-500 text-white font-semibold py-2 px-4 rounded shadow">Start a Print Job</a>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Tutoring -->
+  <div class="bg-green-100 rounded-lg p-6 shadow-md">
+    <h2 class="text-2xl font-bold text-green-800 mb-2">🎓 Tutoring</h2>
+    <p class="text-gray-700 mb-4">Learn new skills with expert guidance and flexible courses tailored to your goals.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold text-green-700">Python Basics</h3>
+        <p class="text-sm text-gray-600">Perfect for beginners looking to start coding.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold text-green-700">3D Design Fundamentals</h3>
+        <p class="text-sm text-gray-600">Learn to create printable models with ease.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold text-green-700">Photography Masterclass</h3>
+        <p class="text-sm text-gray-600">From camera basics to editing techniques.</p>
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="/tutoring/" class="bg-green-600 text-white font-semibold py-2 px-4 rounded shadow">View Tutoring Courses</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- About Section -->
+<section class="bg-white py-12 px-4 text-center">
+  <h2 class="text-2xl font-bold mb-4">About MmSquared</h2>
+  <p class="text-gray-700 max-w-2xl mx-auto">We’re a passionate team blending creativity and technology to help you express, build, and grow. Whether you're capturing memories, prototyping ideas, or learning new skills — we’re here to support your journey.</p>
+</section>
+
+<!-- Contact Section -->
+<section class="bg-gray-800 text-white py-12 px-4 text-center">
+  <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
+  <p class="mb-2">📧 Email: info@mmsquared.co.za</p>
+  <p class="mb-2">📞 Phone: +27 123 456 7890</p>
+  <p>📍 Location: Johannesburg, South Africa</p>
+</section>
 {% endblock %}
