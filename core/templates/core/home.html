@@ -1,0 +1,26 @@
+<!-- core/templates/core/home.html -->
+{% extends 'core/base.html' %}
+
+{% block title %}Home | Mm-squared{% endblock %}
+
+{% block content %}
+  <section class="text-center">
+    <h2 class="text-3xl font-bold mb-4">Capture. Create. Educate.</h2>
+    <p class="mb-6">We offer photography, 3D printing, and tutoring services to bring your ideas to life.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-4 shadow rounded">
+        <h3 class="text-xl font-semibold">📸 Photography</h3>
+        <p>Professional shoots, editing, and portfolio display.</p>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <h3 class="text-xl font-semibold">🖨️ 3D Printing</h3>
+        <p>YOU DREAM IT. WE PRINT IT.</p>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <h3 class="text-xl font-semibold">🎓 Tutoring</h3>
+        <p>WE OFFER MATHEMATICS Tutoring FOR GRADE 8 TO 12.</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -24,6 +24,9 @@ SECRET_KEY = 'django-insecure-!c-rt*wc4=k^y_sc8s)+%xje3pi!y-x7x-t##-__o-on5a-a$c
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+import os 
+
+
 
 ALLOWED_HOSTS = []
 
@@ -31,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'core',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -65,6 +69,8 @@ TEMPLATES = [
         },
     },
 ]
+TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, 'core', 'templates')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'core', 'static')]
 
 WSGI_APPLICATION = 'creativehub.wsgi.application'
 
